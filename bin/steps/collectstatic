@@ -26,6 +26,7 @@ if [ ! "$DISABLE_COLLECTSTATIC" ] && [ -f "$MANAGE_FILE" ]; then
         [ $? -ne 0 ] && {
             echo " !     Error running manage.py collectstatic. More info:"
             echo "       http://devcenter.heroku.com/articles/django-assets"
+            exit 1
         }
     fi
 
