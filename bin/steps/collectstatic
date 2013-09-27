@@ -28,6 +28,9 @@ if [ ! "$DISABLE_COLLECTSTATIC" ] && [ -f "$MANAGE_FILE" ]; then
             echo "       http://devcenter.heroku.com/articles/django-assets"
             exit 1
         }
+    else
+        echo " !     Error running manage.py collectstatic: Dry run failed."
+        exit 1
     fi
 
     echo
